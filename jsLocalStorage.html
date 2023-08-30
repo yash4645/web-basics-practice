@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>local storage</title>
+    <style>
+        img{
+            width: 200px;
+            border-radius: 20px;
+        }
+        button{
+            background-color: aqua;
+            border: 0;
+            padding: 10px 15px;
+            margin: 20px 30px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: blue;
+            color: blanchedalmond;
+        }
+        p{
+            font-size: 30px;
+            font-weight: bolder;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <img src="yash.jpg" alt="yash">
+        <div>
+            <p>like:- <span id="likeCount"></span></p>
+            <p>dislike:- <span id="dislikeCount"></span></p>
+        </div>
+    <div>
+        <button >like</button>
+        <button id="dislike"> dislike</button>
+    </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    // localStorage.setItem("name","yash");
+    // localStorage.setItem("regNo","62");
+    // localStorage.setItem("year","third");
+    // let name=localStorage.getItem("name");
+    // let reg= localStorage.getItem("regNo");
+    // console.log(name,reg);
+    // localStorage.removeItem("year");
+
+
+    // let arr=[1,2,3,4,5]
+    // // array to string
+    // arr=JSON.stringify(arr);
+    // localStorage.setItem("storeArray",arr);
+    // let getArray=localStorage.getItem("storeArray");
+    //  console.log(getArray[0]); // its gives an string
+    // console.log(typeof getArray)
+    // // string to array
+    // getArray=JSON.parse(getArray);
+    // console.log(typeof getArray);
+    // console.log(getArray[0]);
+
+    // let obj={
+    //     name:"ram",
+    //     reg:"20"
+    // }
+    // localStorage.setItem("storeObj",JSON.stringify(obj));
+    // let getObj=JSON.parse(localStorage.getItem("storeObj"));
+    // console.log(getObj);
+
+    let likeIt=localStorage.getItem("likeMe");
+    let dislikeIt=localStorage.getItem("dislikeMe");
+
+    document.getElementById("likeCount").innerText=likeIt;
+    document.getElementById("dislikeCount").innerText=dislikeIt;
+
+
+    document.getElementById("dislike").addEventListener("click", dislikefun);
+    function dislikefun(){
+        // console.log("dislike it");
+        dislikeIt++;
+        document.getElementById("dislikeCount").innerText=dislikeIt;
+        localStorage.setItem("dislikeMe",dislikeIt);
+    }
+
+    document.querySelector("div>button").addEventListener("click",likefun);
+    function likefun(){
+        // console.log("like it");
+        likeIt++;
+        // console.log(likeIt);
+        document.getElementById("likeCount").innerText=likeIt;
+        localStorage.setItem("likeMe",likeIt);
+
+    }
+
+
+</script>
