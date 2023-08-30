@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 3 example</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            justify-content: space-between;
+            
+        }
+        #container>div{
+            text-align: center;
+            width: 300px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        #container>div>img{
+            width:100%;
+        }
+        button{
+            background-color: aqua;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0;
+            font-size: 20px;
+            font-weight: bold;
+            margin: auto;
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            background-color: blue;
+            color: beige;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+    let students=[
+        {
+            Image:"yash.jpg",
+            name:"yash",
+            button:"more",
+        },
+        {
+            Image:"yash.jpg",
+            name:"yash",
+            button:"more",
+        },
+        {
+            Image:"yash.jpg",
+            name:"yash",
+            button:"more",
+        },
+        {
+            Image:"yash.jpg",
+            name:"yash",
+            button:"more",
+        }
+    ]
+
+    for(let i=0;i<students.length;i++){
+        let div=document.createElement("div");
+        let image=document.createElement("img");
+        image.setAttribute("src",students[i].Image);
+        let name=document.createElement("h2");
+        name.innerText=students[i].name;
+        let btn=document.createElement("button");
+        btn.innerText=students[i].button;
+        btn.addEventListener("click",func);
+        function func(){
+            div.style.backgroundColor="red";
+            name.style.color="white";
+        }
+        div.append(image,name,btn);
+
+        document.querySelector("#container").append(div)
+    }
+</script>
