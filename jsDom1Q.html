@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js example 1</title>
+    <style>
+        button{
+            background-color: aqua;
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0;
+            width: 150px;
+            font-size: 30px;
+            font-weight: bold;
+            margin: auto;
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        button:hover{
+            background-color: blue;
+            color: beige;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            margin: auto;
+            display: block;
+            margin-top: 30px ;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 0;
+            border-radius: 10px;
+        }
+        h2{
+            font-size: 100px;
+            text-align: center;
+            font-weight: bolder;
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <input id="age" type="number" placeholder="enter age" value=" ">
+    <br><br>
+    <button onclick="submit()">submit</button>
+    <h2 id="display"></h2>
+</body>
+</html>
+
+<script>
+    
+    function submit(){
+        let age=document.getElementById("age").value;
+        if(age<12 && age>0){
+            document.getElementById("display").innerText="you can't drive,your age is only "+age;
+        }
+        else if(age>=12 && age<18){
+            document.getElementById("display").innerText="you are only "+age+" just try to learn first";
+        }
+        else if(age>=18){
+            document.getElementById("display").innerText="you can drive";
+        }
+        else{
+            document.getElementById("display").innerText="plz enter valid age ";
+        }
+       
+    }
+
+</script>
