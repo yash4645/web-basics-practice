@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom2 class</title>
+</head>
+<body><div id="container">
+    <h1 id="mahi" class="csk">i m dhoni</h1>
+    <h1 id="kohali" class="rcb">i m kohali</h1>
+    <h1 id="rohit" class="mi">i m rohit</h1>
+    <h1 id="sachin" class="mi">i m sacchin</h1>
+    <h1 id="abd" class="rcb">i m abd </h1>
+    <h1 id="raina" class="csk">i m raina</h1>
+    <button>Color</button>
+    
+</div>
+
+</body>
+</html>
+
+<!-- quaryselector select only 1st element of the class or tag yet quaryselectorall select all the element of the class as a array of objects-->
+<!-- by using quaryselector or quaryselectorall we can select combinastors as(div>p+h1) -->
+
+<script>
+//     let csk=document.getElementsByClassName("csk");
+// //    csk[0].style.backgroundColor="yellow"
+// for(let i=0;i<csk.length;i++){
+//     csk[i].style.backgroundColor="yellow"
+// }
+// let allp=document.getElementsByTagName("h1");
+// allp[2].style.backgroundColor="blue";
+
+// let csk=document.querySelector(".csk").style.backgroundColor="yellow";
+   
+// let allTag=document.querySelectorAll("h1");
+// for(let i=0;i<allTag.length;i+=2){
+//     allTag[i].style.backgroundColor="green";
+// }
+
+document.querySelector("button").addEventListener("click",func);
+function func(){
+   document.querySelector("h1").style.backgroundColor="blue";
+}
+ let x=document.querySelectorAll("#container>h1");
+for(let i=0;i<x.length;i++){
+    x[i].addEventListener("click",func2);
+}
+function func2(event){
+event.target.nextElementSibling.style.backgroundColor="blue";
+}
+</script>
