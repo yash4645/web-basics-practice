@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 1</title>
+</head>
+<body>
+    <!-- here we will use some js method  -->
+    <!-- onclick is a attribute that we can use inside html tag and after we can use the function in js -->
+    <!-- <button onclick="like_me()">like me</button>
+
+
+    <h2 id="first">hii here we select this h2 tag by js</h2>
+    <h1 id="yash">hii I am <i>Yash Raj</i></h1> -->
+
+    <!-- <button onclick="hiifun()">hiii</button>
+    <h1 id="call"></h1>
+    <button onclick="byefun()">bye</button>
+    -->
+
+    <!-- <input id="name" type="text" placeholder="enter name" value="">
+
+    <select name="" id="role">
+        <option value="Hii I am Full Stack Developer">FSD</option>
+        <option value=" Hii I am Frontend Developer">FRONTAND</option>
+        <option value=" Hii I am Backend Developer">BACKEND</option>
+    </select>
+    <button onclick="get()">submit</button>
+    <h1 id="display"></h1>
+    <p id="displayjob"></p> -->
+
+    <h1 id="change">hii i m yash</h1>
+    <input id="text1" type="text" placeholder="enetr the color of text">
+    <input id="back" type="text" placeholder="enter the background color of text">
+    <br><br>
+    <button onclick="changecolor()">change color</button>
+    
+    
+</body>
+</html>
+<script>
+    // let counter=0;
+    // function like_me(){
+    //     counter++;
+    //     // console.log(counter);
+    //     // alert shows the alert msg on the top when we click the button
+    //     alert(counter);
+    // }
+
+
+    // let x=document.getElementById("first").innerText;
+    // // alert(x); this is showing alert till we cick ook we cant access the page
+    // console.log(x);
+
+    // let y=document.getElementById("yash").innerHTML;
+    // console.log(y);
+
+    // let x=document.getElementById("hiii").innerText;
+    // let x="Yash";
+    // function hiifun(){
+    //     document.getElementById("call").innerText = "hii " +x + "  welcome";
+    // }
+    // function byefun(){
+    //     document.getElementById("call").innerText= "okk "+x+" bye";
+    // }
+
+    // function get(){
+    //     let name=document.getElementById("name").value;
+    //     let role=document.getElementById("role").value;
+    //     document.getElementById("displayjob").innerText=role;
+
+    //     document.getElementById("display").innerText=name;
+    // }
+
+    function changecolor(){
+        let text=document.getElementById("text1").value;
+        let back=document.getElementById("back").value;
+        document.getElementById("change").style.color=text;
+        document.getElementById("change").style.backgroundColor=back;
+
+    }
+</script>
