@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 3</title>
+
+    <style>
+        .yash{
+            background-color: aqua;
+            color: blanchedalmond;
+            font-size: 50px;
+            font-style: italic;
+            text-align: center;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>hii i am yash  </h1>
+    <form action="">
+        <input type="text" placeholder="enter name" id="name">
+        <input type="number" name="" id="mobile">
+        <input type="submit" value="login">
+    </form>
+
+    <button>click to see data</button>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("h1").setAttribute("class","yash");
+
+    document.querySelector("form").addEventListener("submit",func);
+
+    function func(){
+        event.preventDefault()
+         let name=document.querySelector("#name").value;
+         let mobile=document.querySelector("#mobile").value;
+         console.log(name,mobile);
+
+    }
+
+
+    document.querySelector("button").addEventListener("click",getData);
+    function getData(){
+
+        let data=[
+        {name:"radhe",color:"yellow"},
+        {name:"yash",color:"blue"},
+        {name:"anu",color:"red"},
+        {name:"riya",color:"orange"},
+        {name:"rohit",color:"green"},
+        {name:"joyti",color:"pink"}
+    ]
+
+    for(let i=0;i<data.length;i++){
+        let head=document.createElement("h1");
+    head.innerText=data[i].name;
+    head.style.color=data[i].color;
+    document.querySelector("body").append(head);
+
+    }
+
+    }
+</script>
