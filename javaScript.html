@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Practice</title>
+    <style>
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 50px;
+            
+        }
+        button{
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+            background-color: aqua;
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 40px;
+            border: 0px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main">Hii i am Yash</h1>
+    <button id="buttonRed" onclick="changeRed()">click here to change color </button>
+    <h1 id="print"></h1>
+</body>
+</html>
+<script>
+    let count=0;
+    function changeRed(){   
+        if(count%2==0){
+            document.getElementById("main").style.color="gold"
+        document.getElementById("main").style.backgroundColor="aqua"
+        document.getElementById("buttonRed").style.backgroundColor="red"
+        document.getElementById("print").innerText="colour changed..."
+            count++;
+        }
+        else{
+            document.getElementById("main").style.color="black"
+        document.getElementById("main").style.backgroundColor="white"
+        document.getElementById("buttonRed").style.backgroundColor="aqua"
+        document.getElementById("print").innerText="this is our previous colour..."    
+        count++;
+        }
+       
+    }
+
+</script>

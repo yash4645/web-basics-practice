@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <!-- tag selectors -->
+      <!-- /* h1{
+        background-color: aqua;
+      } */
+      /* p{
+        background-color: blue;
+        font-size: 60px;
+        text-align: center;
+      }
+      img{
+        width: 200px;
+        border-radius: 10%;
+      }
+      /* id selectors start eith #id name, id is unique */
+     /* #mahi{
+        background-color: yellow;
+     }
+     #kohali{
+        background-color: red;
+     }
+     #rohit{
+        background-color: blue;
+     } */
+     /* class selectors start with .classname */
+     /* .csk{
+        background-color: yellow;
+     }
+     .rcb{
+        background-color: red;
+     }
+     .mi{
+        background-color: blue;
+     }
+     /* universal selectors * */
+     /* *{
+        font-style: italic;
+     } */ */
+/* priority of selectors - SICTU
+s>i>c>t>u
+s-inline -1000
+i-id-100
+c-class-10
+t-tag-1
+u-universal-0
+*/ */ -->
+<style> 
+#container{
+    height: 500px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.box{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+img{
+    width: 50%;
+    height: 10%;
+    border-radius: 10%;
+}
+img:hover{
+   height: 15%;
+   width: 60%;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button{
+    background-color: aqua;
+    border: 0px;
+    border-radius: 5px;
+    margin: -20px;
+}
+button:hover{
+   background-color: blue;
+   cursor: pointer;
+}
+*{
+    text-align: center;
+    text-decoration: darkmagenta;
+    background-color: chartreuse;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <h1>hii this is my pc</h1>
+    <p>this is p tag</p>
+    <img src="yash.jpg" alt="">
+     <h1 id="mahi" class="csk">i m dhoni</h1>
+<h1 id="kohali" class="rcb">i m kohali</h1>
+<h1 id="rohit" class="mi">i m rohit</h1>
+<h1 id="sachin" class="mi">i m sacchin</h1>
+<h1 id="abd" class="rcb">i m abd </h1>
+<h1 id="raina" class="csk">i m raina</h1>
+ -->
+ <h1>this is a intro of two persons</h1>
+ <div id="container">
+    <div class="box">
+     <img src="yash.jpg" alt="yash raj">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aspernatur repellat dolorum amet minima provident deserunt maiores rem assumenda rerum vitae expedita obcaecati tempore quia at nobis ratione, ducimus id possimus porro enim. Temporibus illum dolore quisquam voluptates, rerum voluptatibus?</p>
+     <button>more</button>
+
+
+
+    </div>
+    <div class="box">
+        <img src="yash.jpg" alt="yash raj">
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aspernatur repellat dolorum amet minima provident deserunt maiores rem assumenda rerum vitae expedita obcaecati tempore quia at nobis ratione, ducimus id possimus porro enim. Temporibus illum dolore quisquam voluptates, rerum voluptatibus?</p>
+     <button>more</button>
+
+
+    </div>
+ </div>
+
+
+
+
+</body>
+</html>

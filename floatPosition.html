@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float and position property</title>
+    <style>
+        /* position property:- !)static:- normal no change,2)relative:-compair to top,3)absulate:-move box left right top buttom,
+        4)fixed:-box will be fixed at a space,5)sticky:-in this we can scroll then box will go up */
+        /* flote property is used to make the box out of normal flow,after we can move the box left right */
+        .box-set{
+            background-color: whitesmoke;
+        }
+        .box{
+            border-radius: 5px;
+            margin: 10px;
+            position: absolute;
+            border: 1px solid red;
+            height: 50px;
+            width: 40px;
+        }
+        #box1{
+           
+            background-color: aqua;
+            top: 10px;
+        }
+        #box2{
+          
+            background-color: blue;
+            left: 20px;
+        }
+        #box3{
+           
+            background-color: greenyellow;
+            right: 30px;
+        }
+        #box4{
+           
+            background-color: purple;
+            bottom: 40px;
+        }
+        img{
+            display: block;
+            /* float:left; */
+            width: 300px;
+           margin: auto;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-set">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+    </div>
+    <img src="yash.jpg" alt="">
+</body>
+</html>

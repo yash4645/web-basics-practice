@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        #container{
+            display: grid;
+            /* by grid specify rows and collumn both */
+            grid-template-columns: repeat(2,100px); 
+            grid-template-rows: 100px 100px;
+            /* row specify height and column specify width */
+            /* repeat(no of times,size) */
+            /* gap: row-gap collumn-gap */
+            /* justify-content,align-items works similer as flex */
+            gap: 10px 20px;
+            grid-template-areas:"rd" "bl"
+                                  "org" "grn" ;
+        }
+        #container>div{
+            padding: 0px;
+
+        }
+        #container>div:nth-child(1){
+            background-color: red;
+            grid-area: rd;
+        }
+        #container>div:nth-child(2){
+            background-color: blue;
+            grid-area: bl;
+
+        }
+        #container>div:nth-child(3){
+            background-color: orange;
+            grid-area: org;
+        }
+        #container>div:nth-child(4){
+            background-color: green;
+            grid-area: grn;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    
+</body>
+</html>
+<!-- parent property:-grid-templete-culomn(width),grid-templete-rows(height),repeate(number of times,size),
+    gap:row-gap,culomn-gap,justify-content,align-items, grid-templete-ares"" rows""culmn(grid area colors in a row and culomn )"....child property:- grid-area(colors), -->
+<!-- grid-template-columns: repeat(auto-fill,minmax(200px,1fr)) -->
+<!-- grid-auto-rows/columns:minmax(100px,auto) -->
