@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input js</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- boiler-plate-code for all js -->
+<script>
+    function runProgram(input){
+
+    }
+    process.stdin.resume();
+    process.stdin.setEncoding("ascii");
+    let read="";
+    process.stdin.on("data", function(input) {
+        read += input;
+    });
+    process.stdin.on("end",function(){
+        read = read.replace(/\n$/, "");
+        read = read.replace(/\n$/, "");
+        takeInput(read)
+    });
+</script>
